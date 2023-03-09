@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import Navbar from "./Navbar";
+import Footer from "./Footer";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import logo from "./assets/zap-2.png";
@@ -36,13 +37,13 @@ const GridContainer = styled.div`
     "footer footer footer footer footer";
 `;
 
-const StyledFooter = styled.footer`
-  grid-area: footer;
-  display: flex;
-  background-color: aqua;
-  justify-self: center;
-  align-self: center;
-`;
+// const StyledFooter = styled.footer`
+//   grid-area: footer;
+//   display: flex;
+//   background-color: aqua;
+//   justify-self: center;
+//   align-self: center;
+// `;
 
 function App() {
   return (
@@ -66,9 +67,10 @@ function App() {
           </Switch>
           <h1>Hello Björn</h1>
         </MainContainer>
-        <StyledFooter>
+        <Footer />
+        {/* <StyledFooter>
           <p>©Zap Industries, 1978</p>
-        </StyledFooter>
+        </StyledFooter> */}
       </GridContainer>
     </Router>
   );
