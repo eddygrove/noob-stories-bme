@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import Hero from "./Hero";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import logo from "./assets/zap-2.png";
@@ -54,12 +55,17 @@ function App() {
         </LogoContainer>
         <Navbar />
         <MainContainer>
+          <Hero text="MyHero" myOtherKey={33} name="Burn" />
+          {/* text="MyHero", myOtherKey etc är props till Hero */}
           <Switch>
             <Route path="/about">
               <p>About</p>
             </Route>
             <Route path="/portfolio">
               <p>Portfolio</p>
+            </Route>
+            <Route path="/contact">
+              <p>Contact</p>
             </Route>
             <Route path="/">
               <p>Home</p>

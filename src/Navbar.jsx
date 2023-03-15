@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const StyledNav = styled.nav`
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   grid-area: top;
 `;
